@@ -5,65 +5,64 @@ import { BarChart, Bar, ResponsiveContainer } from "recharts";
 const data = [
   {
     name: "Jan",
-    range : "2700",
-    color :"#d2ceed"
+    range: "2700",
+    color: "#d2ceed",
   },
   {
     name: "Feb",
-    range : "1900",
-    color :"#d2ceed"
+    range: "1900",
+    color: "#d2ceed",
   },
   {
     name: "Mar",
-    range : "3900",
-    color :"#d2ceed"
+    range: "3900",
+    color: "#d2ceed",
   },
   {
     name: "Apr",
-    range : "2800",
-    color :"#d2ceed"
+    range: "2800",
+    color: "#d2ceed",
   },
   {
     name: "May",
-    range : "3200",
-    color :"#d2ceed"
+    range: "3200",
+    color: "#d2ceed",
   },
   {
     name: "Jun",
-    range : "1500",
-    color :"#d2ceed"
+    range: "1500",
+    color: "#d2ceed",
   },
   {
     name: "Jul",
-    range : "3500",
-    color :"#d2ceed"
+    range: "3500",
+    color: "#d2ceed",
   },
   {
     name: "Aug",
-    range : "4000",
-    color :"#513aef"
+    range: "4000",
+    color: "#a020f0",
   },
   {
     name: "Sep",
-    range : "3700",
-    color :"#d2ceed"
+    range: "3700",
+    color: "#d2ceed",
   },
   {
     name: "Oct",
-    range : "3300",
-    color :"#d2ceed"
+    range: "3300",
+    color: "#d2ceed",
   },
   {
     name: "Nov",
-    range : "3000",
-    color :"#d2ceed"
+    range: "3000",
+    color: "#d2ceed",
   },
   {
     name: "Dec",
-    range : "3700",
-    color :"#d2ceed"
+    range: "3700",
+    color: "#d2ceed",
   },
-  
 ];
 const BarGraph = () => {
   return (
@@ -85,16 +84,18 @@ const BarGraph = () => {
           <div className=" h-[12rem] w-full max-w-full mx-3 ">
             <ResponsiveContainer width="100%" height="100%">
               <BarChart width={150} height={40} data={data}>
-                <Bar dataKey="range" radius={15} fill={data.name === "Aug"? "#513aef": "#d2ceed"}/>
+                <Bar
+                  dataKey="range"
+                  radius={15}
+                  fill={data.name === "Aug" ? "#a020f0" : "#d2ceed"}
+                />
               </BarChart>
             </ResponsiveContainer>
             <div className="flex items-center justify-between mx-3 md:mx-4 gap-1">
-            {data.map((data, index) =>{
-              return (
-                <p key={index}>{data.name}</p>
-              )
-            })}
-             </div>
+              {data.map((data, index) => {
+                return <p key={index}>{data.name}</p>;
+              })}
+            </div>
           </div>
         </div>
       </div>

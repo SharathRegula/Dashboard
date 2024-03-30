@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import * as FaIcons from "react-icons/fa";
 import * as RiIcons from "react-icons/ri";
 import * as IoIcons from "react-icons/io";
-import mini from '../Data/profile.avif'
+import mini from "../Data/profile.avif";
 import { SideBarData } from "../Data/SideBarData";
 
 const SideBar = (props) => {
@@ -11,7 +11,10 @@ const SideBar = (props) => {
     <>
       <aside className="nav-sidebar h-screen fixed w-full sm:w-[300px] overflow-hidden bg-violet-950 z-[999]  ">
         <div className="px-1 py-10">
-          <div onClick={props.setNavState} className="sidebar text-white mr-3 m right-0  float-right z-10 cursor-pointer md:hidden hover:text-white">
+          <div
+            onClick={props.setNavState}
+            className="sidebar text-white mr-3 m right-0  float-right z-10 cursor-pointer md:hidden hover:text-white"
+          >
             <FaIcons.FaTimes size={25} />
           </div>
           <nav>
@@ -31,25 +34,25 @@ const SideBar = (props) => {
                 {SideBarData.map((item, index) => {
                   return (
                     <li key={index} className={`${item.cName} list-none`}>
-                    <Link
-                      className="ml-5 mx-2 flex items-center justify-between mx-auto gap-8  py-2 list-none transform transition-transform duration-300 hover:-translate-y-1 hover:bg-teal-600 hover:text-white active:bg-green-300 hover:px-3 hover:py-2 hover:rounded-lg"
-                      to={item.path}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <div className="flex items-center gap-3 text-2xl py-2 px-3 text-slate-300">
-                        {item.icons}
-                        <span className="text-base text-slate-400">
-                          {item.title}
-                        </span>
-                      </div>
-                      <div className="">
-                        <span className="float-right text-2xl text-white">
-                          {item.sideIcon}
-                        </span>
-                      </div>
-                    </Link>
-                  </li>
+                      <Link
+                        className="ml-5 mx-2 flex items-center justify-between mx-auto gap-8  py-2 list-none transform transition-transform duration-300 hover:-translate-y-1 hover:bg-teal-600 hover:text-white active:bg-green-300 hover:px-3 hover:py-2 hover:rounded-lg"
+                        to={item.path}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <div className="flex items-center gap-3 text-2xl py-2 px-3 text-slate-300">
+                          {item.icons}
+                          <span className="text-base text-slate-400">
+                            {item.title}
+                          </span>
+                        </div>
+                        <div className="">
+                          <span className="float-right text-2xl text-white">
+                            {item.sideIcon}
+                          </span>
+                        </div>
+                      </Link>
+                    </li>
                   );
                 })}
               </li>
@@ -77,7 +80,7 @@ const SideBar = (props) => {
                 <div className="flex items-center justify-between gap-12">
                   <div>
                     <h2 className="flex flex-col text-white text-sm">
-                      Rohan{" "}
+                      Shahrukh{" "}
                       <span className="text-xs text-gray-200">
                         Front-end Developer
                       </span>
